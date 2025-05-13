@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>QUIÉNES SOMOS</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', 'Georgia', serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      animation: fondoMagico 20s ease-in-out infinite;
+      overflow-x: hidden;
+      background-color: #ffccf9;
+    }
+
+    @keyframes fondoMagico {
+      0%   { background-color: #ffccf9; }
+      33%  { background-color: #e5ccff; }
+      66%  { background-color: #ffb3d9; }
+      100% { background-color: #d5caff; }
+    }
+
+    .header {
+      text-align: center;
+      font-size: 42px;
+      font-weight: bold;
+      color: #b539b8;
+      background-color: white;
+      padding: 30px 20px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .content {
+      padding: 30px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+      color: #333;
+      font-size: 20px;
+      line-height: 1.8;
+    }
+
+    .content p {
+      margin-bottom: 25px;
+    }
+
+    .content img {
+      margin-top: 20px;
+      max-width: 80%;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    }
+
+    .back-button {
+      display: block;
+      margin: 40px auto 0 auto;
+      background-color: #d88be0;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 12px 24px;
+      font-size: 18px;
+      border-radius: 12px;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #ba6fc3;
+      transform: scale(1.05);
+    }
+
+    .team {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 25px;
+      margin-top: 30px;
+    }
+
+    .member {
+      background-color: white;
+      border-radius: 15px;
+      padding: 24px;
+      width: 220px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s;
+    }
+
+    .member:hover {
+      transform: scale(1.05);
+    }
+
+    .icon {
+      font-size: 45px;
+      margin-bottom: 10px;
+    }
+
+    .member h3 {
+      margin: 10px 0 5px;
+      color: #b539b8;
+      font-size: 22px;
+    }
+
+    .member p {
+      font-size: 16.5px;
+      color: #555;
+      margin-top: 12px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">QUIÉNES SOMOS</div>
+
+  <div class="content">
+    <p>Somos un grupo comprometido con fortalecer los lazos entre las distintas generaciones.</p>
+    <p>Creemos que cada persona, sin importar su edad, tiene algo valioso que aportar. Nuestro propósito es construir puentes de entendimiento y comunicación entre jóvenes, adultos y personas mayores.</p>
+
+    <p>Juntos volvamos una cadena de amor, comunicación y entendimiento entre padres e hijos, una cadena de amor y comprensión que no solo entre padres e hijos se entiendan, sino en todos los integrantes de la familia. Los bajos de ánimo y los momentos de soledad sean compensados con un abrazo sincero y de humildad.</p>
+    
+    <p>¡Juntos conectamos generaciones para un futuro más empático y unido!</p>
+
+    <img src="equipo.jpg" alt="Equipo Conectando Generaciones">
+
+    <p>Nuestro equipo está conformado por:</p>
+    <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; margin-top: 20px;">
+
+      <div style="background-color: #fce4ff; padding: 20px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 200px; text-align: center;">
+        <div style="font-size: 40px;">🌸</div>
+        <h4 style="margin: 10px 0 5px;">Darcy Agudelo</h4>
+        <p style="font-size: 14px;">Creadora de la pagina Web y la Aplicacion</p>
+      </div>
+    
+      <div style="background-color: #fce4ff; padding: 20px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 200px; text-align: center;">
+        <div style="font-size: 40px;">🎨</div>
+        <h4 style="margin: 10px 0 5px;">Gabriela Marquez</h4>
+        <p style="font-size: 14px;">Creadora del Juego de Rol y Libro Digital</p>
+      </div>
+    
+      <div style="background-color: #fce4ff; padding: 20px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 200px; text-align: center;">
+        <div style="font-size: 40px;">📚</div>
+        <h4 style="margin: 10px 0 5px;">Sharit Tobar</h4>
+        <p style="font-size: 14px;">Creadora del ChatBot y Videos de Animacion</p>
+      </div>
+    
+      <div style="background-color: #fce4ff; padding: 20px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 200px; text-align: center;">
+        <div style="font-size: 40px;">💡</div>
+        <h4 style="margin: 10px 0 5px;">Sara Sapuy</h4>
+        <p style="font-size: 14px;">Creadora de las Actividades y Libro Digital</p>
+      </div>
+    
+      <div style="background-color: #fce4ff; padding: 20px; border-radius: 15px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); width: 200px; text-align: center;">
+        <div style="font-size: 40px;">🤝</div>
+        <h4 style="margin: 10px 0 5px;">Laura Sapuy</h4>
+        <p style="font-size: 14px;">Creadora del contenido de los Videos Animados</p>
+      </div>
+    
+    </div>
+
+    <a href="index.html" class="back-button">Volver al inicio</a>
+  </div>
+
+</body>
+</html>

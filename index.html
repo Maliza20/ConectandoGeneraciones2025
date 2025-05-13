@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CONECTANDO GENERACIONES</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      animation: fondoMagico 20s ease-in-out infinite;
+      overflow: hidden;
+      position: relative;
+      background-color: #ffccf9;
+    }
+     @keyframes fondoMagico {
+      0%   { background-color: #ffccf9; }
+      33%  { background-color: #e5ccff; }
+      66%  { background-color: #ffb3d9; }
+      100% { background-color: #d5caff; }
+    }
+    .title {
+      text-align: center;
+      font-size: 32px;
+      font-weight: bold;
+      color: #b539b8;
+      background-color: white;
+      padding: 40px 20px;
+      box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+      z-index: 2;
+    }
+    .menu {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: space-around;
+      box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+      padding: 10px 0;
+      z-index: 2;
+    }
+    .menu a {
+      text-decoration: none;
+      color: #ffffff;
+      background-color: #d88be0;
+      padding: 10px 20px;
+      border-radius: 10px;
+      font-weight: bold;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    .menu a:hover {
+      background-color: #ba6fc3;
+      transform: scale(1.05);
+    }
+    .content {
+      flex: 1;
+      padding: 20px;
+      text-align: center;
+      z-index: 2;
+    }
+    .content img {
+      margin-top: 20px;
+      max-width: 90%;
+      height: auto;
+      border-radius: 15px;
+      box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+  <div class="title">CONECTANDO GENERACIONES</div>
+  <div class="content">
+    <h3>Bienvenido a nuestra página de Conectando Generaciones</h3>
+    <h3>Aquí resolveremos tus dudas y te explicaremos sobre tus generaciones</h3>
+    <img src="Imagen111.jpg" alt="" width="500" height="600"/>
+  </div>
+  <div class="menu">
+    <a href="QUIENES SOMOS.html">QUIENES SOMOS</a>
+    <a href="EN QUE CONSISTE.html">DE QUE TRATA</a>
+    <a href="TEMAS.html">TEMAS</a>
+    <a href="CONTACTO.html">CONTACTO</a>
+  </div>
+
+</body>
+</html>

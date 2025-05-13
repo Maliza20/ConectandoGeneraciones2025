@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sentimientos y Emociones</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', 'Georgia', serif;
+      background: linear-gradient(45deg, #ffccf9, #e5ccff, #ffb3d9, #d5caff);
+      background-size: 400% 400%;
+      animation: fondoMagico 20s ease-in-out infinite;
+      color: #333;
+      min-height: 100vh; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @keyframes fondoMagico {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .header {
+      font-size: 36px;
+      font-weight: bold;
+      color: #b539b8;
+      background-color: white;
+      padding: 20px 40px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+      border-radius: 15px;
+      text-align: center;
+    }
+
+    .content {
+      max-width: 1400px; 
+      width: 95%; 
+      margin: 30px 0;
+      padding: 40px;
+      background-color: rgba(255, 255, 255, 0.6);
+      border-radius: 20px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .content h2 {
+      color: #933b9d;
+      font-size: 30px;
+      margin-bottom: 20px;
+    }
+
+    .content h4 {
+      color: #7c2e8c;
+      font-size: 26px;
+      margin-top: 40px;
+    }
+
+    .content p {
+      font-size: 20px;
+      line-height: 1.8;
+      margin-bottom: 20px;
+    }
+
+    .examples {
+      background-color: rgba(255, 255, 255, 0.85);
+      border-radius: 20px;
+      padding: 30px;
+      margin: 30px auto;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+      text-align: left;
+      font-size: 18px;
+    }
+
+    .examples p {
+      margin: 12px 0;
+    }
+
+    .image {
+      margin: 40px 0;
+    }
+
+    .image img {
+      width: 100%;
+      max-width: 500px;
+      border-radius: 20px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .back-button {
+      display: inline-block;
+      margin: 30px 0;
+      background-color: #d88be0;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
+      padding: 14px 36px;
+      font-size: 18px;
+      border-radius: 14px;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .back-button:hover {
+      background-color: #ba6fc3;
+      transform: scale(1.05);
+    }
+
+    /* Emojis flotantes */
+    .emoji {
+      font-size: 100px;
+      display: inline-block;
+      animation: moverEmoji 10s infinite alternate;
+      margin: 0 50px;
+    }
+
+    @keyframes moverEmoji {
+      0% { transform: translateY(-10px) rotate(0deg); }
+      50% { transform: translateY(10px) rotate(15deg); }
+      100% { transform: translateY(-10px) rotate(0deg); }
+    }
+
+    .footer-text {
+      margin-top: 40px;
+      font-size: 18px;
+      color: #6b2e6b;
+      text-align: center;
+    }
+
+    /* Estilos para el formulario */
+    .formulario {
+      background: white;
+      padding: 30px;
+      border-radius: 20px;
+      max-width: 700px;
+      margin: 0 auto;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    .formulario h2 {
+      color: #b539b8;
+      margin-bottom: 20px;
+    }
+    .pregunta {
+      margin: 20px 0;
+      text-align: left;
+    }
+    label {
+      display: block;
+      margin: 8px 0;
+    }
+    input[type="text"] {
+      width: 95%;
+      padding: 10px;
+      margin-top: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background-color: #d88be0;
+      color: white;
+      padding: 10px 24px;
+      border: none;
+      border-radius: 12px;
+      font-size: 18px;
+      margin-top: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+    }
+    button:hover {
+      background-color: #ba6fc3;
+      transform: scale(1.05);
+    }
+    .resultado {
+      margin-top: 30px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #7c2e8c;
+      text-align: center;
+    }
+    .errores {
+      margin-top: 20px;
+      font-size: 18px;
+      color: #d32f2f;
+      text-align: left;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">Sentimientos y Emociones</div>
+
+  <div class="content">
+    <h2>¿Sabes la diferencia entre sentimientos y emociones?</h2>
+    <p>
+      Aunque parezcan lo mismo, tienen diferencias especiales. Las emociones aparecen de forma rápida e intensa. Los sentimientos, en cambio, son más tranquilos y duraderos.
+    </p>
+
+    <h4>🌈 Emociones</h4>
+    <p>Son como olas que llegan sin avisar. Nacen en el cuerpo como respuesta a lo que vivimos, sin pensarlas demasiado.</p>
+
+    <div class="examples">
+      <p><strong>Alegría:</strong> Cuando te dan una sorpresa linda y sonríes sin darte cuenta.</p>
+      <p><strong>Tristeza:</strong> Al perder algo o a alguien querido, sientes un nudo en el pecho y ganas de llorar.</p>
+      <p><strong>Miedo:</strong> Cuando escuchas un ruido fuerte y tu corazón late más rápido.</p>
+    </div>
+
+    <h4>💜 Sentimientos</h4>
+    <p>Surgen después de una emoción, cuando ya hemos pensado en lo que sentimos. Son más profundos y pueden quedarse más tiempo con nosotros.</p>
+
+    <div class="examples">
+      <p><strong>Esperanza:</strong> Cuando sientes dentro de ti que todo puede mejorar.</p>
+      <p><strong>Amor:</strong> Esa calidez duradera que nace al querer a alguien de verdad.</p>
+      <p><strong>Orgullo:</strong> Cuando ves algo que hiciste bien o ves triunfar a alguien que quieres.</p>
+    </div>
+
+    <div class="image">
+        <img src="Sennnnnnnn.jpg" alt="Ilustración de emociones">
+    </div>
+
+    <p>
+      Validar las emociones de nuestros hijos e hijas les enseña que no están solos, que lo que sienten es importante, y que en casa pueden encontrar un espacio seguro para expresarse. 💖
+    </p>
+
+    <div style="margin-top: 50px;">
+      <span class="emoji">😊</span>
+      <span class="emoji">💖</span>
+    </div>
+
+    <div class="footer-text">
+      Les dejaremos adelante una mini encuesta para saber cuánto saben de emociones y si saben identificarlas.
+    </div>
+
+  </div>
+
+  <div class="formulario">
+    <h2>Identificando sentimientos y emociones</h2>
+    <form id="testForm">
+      <div class="pregunta">
+        <p>Nombre:</p>
+        <input type="text" id="nombre" required>
+      </div>
+
+      <div class="pregunta">
+        <p>1. Cuando estás enamorado es:</p>
+        <label><input type="radio" name="p1" value="sentimiento"> Sentimiento</label>
+        <label><input type="radio" name="p1" value="emocion"> Emoción</label>
+      </div>
+
+      <div class="pregunta">
+        <p>2. Sentir un vacío o dolor en el corazón cuando pierdes algo importante o extrañas a alguien querido:</p>
+        <label><input type="radio" name="p2" value="sentimiento"> Sentimiento</label>
+        <label><input type="radio" name="p2" value="emocion"> Emoción</label>
+      </div>
+
+      <div class="pregunta">
+        <p>3. El orgullo es un:</p>
+        <label><input type="radio" name="p3" value="sentimiento"> Sentimiento</label>
+        <label><input type="radio" name="p3" value="emocion"> Emoción</label>
+      </div>
+
+      <div class="pregunta">
+        <p>4. Robaron a un anciano su cartera y pidió ayuda, no lo ayudé y la culpa no me dejó dormir. ¿Sentimiento o emoción?</p>
+        <label><input type="radio" name="p4" value="sentimiento"> Sentimiento</label>
+        <label><input type="radio" name="p4" value="emocion"> Emoción</label>
+      </div>
+
+      <div class="pregunta">
+        <p>5. La esperanza es un:</p>
+        <label><input type="radio" name="p5" value="sentimiento"> Sentimiento</label>
+        <label><input type="radio" name="p5" value="emocion"> Emoción</label>
+      </div>
+
+      <div class="pregunta">
+        <p>6. El enojo es una:</p>
+        <label><input type="radio" name="p6" value="sentimiento"> Sentimiento</label>
+        <label><input type="radio" name="p6" value="emocion"> Emoción</label>
+      </div>
+
+      <div class="pregunta">
+        <p>7. Veo a mi mejor amiga casarse con alguien que le ha sido infiel, pero ella lo perdonó y siento coraje:</p>
+        <label><input type="radio" name="p7" value="sentimiento"> Sentimiento</label>
+        <label><input type="radio" name="p7" value="emocion"> Emoción</label>
+      </div>
+
+      <div class="pregunta">
+        <p>8. Escribe un ejemplo de un sentimiento:</p>
+        <input type="text" id="sentimientoEjemplo" required>
+      </div>
+
+      <div class="pregunta">
+        <p>9. Escribe un ejemplo de una emoción:</p>
+        <input type="text" id="emocionEjemplo" required>
+      </div>
+
+      <button type="button" onclick="corregir()">Enviar respuestas</button>
+
+      <div class="resultado" id="resultado"></div>
+      <div class="errores" id="errores"></div>
+
+    </form>
+  </div>
+
+<script>
+function corregir() {
+  let correctas = 0;
+  const respuestas = {
+    p1: "sentimiento",
+    p2: "sentimiento",
+    p3: "sentimiento",
+    p4: "emocion",
+    p5: "sentimiento",
+    p6: "emocion",
+    p7: "sentimiento"
+  };
+
+  const explicaciones = {
+    p1: "El enamoramiento es un sentimiento porque es duradero y profundo.",
+    p2: "El dolor por perder algo o a alguien es un sentimiento porque permanece en el tiempo.",
+    p3: "El orgullo es un sentimiento porque es una valoración estable de uno mismo o de otros.",
+    p4: "La culpa inmediata tras un acto es una emoción porque es una reacción rápida y automática.",
+    p5: "La esperanza es un sentimiento porque implica una actitud continua hacia el futuro.",
+    p6: "El enojo es una emoción porque es una reacción rápida ante algo que nos molesta.",
+    p7: "El coraje en este contexto es un sentimiento porque se mantiene en el tiempo hacia la situación."
+  };
+
+  let errores = [];
+
+  for (let i = 1; i <= 7; i++) {
+    const seleccionada = document.querySelector(`input[name="p${i}"]:checked`);
+    if (seleccionada) {
+      if (seleccionada.value === respuestas[`p${i}`]) {
+        correctas++;
+      } else {
+        errores.push(`Pregunta ${i}: ${explicaciones[`p${i}`]}`);
+      }
+    } else {
+      errores.push(`Pregunta ${i}: No respondiste esta pregunta.`);
+    }
+  }
+
+  const sentimientoEjemplo = document.getElementById('sentimientoEjemplo').value.trim();
+  const emocionEjemplo = document.getElementById('emocionEjemplo').value.trim();
+
+  if (sentimientoEjemplo !== "") {
+    correctas++;
+  } else {
+    errores.push("Ejemplo de sentimiento: No escribiste un ejemplo. Recuerda que un sentimiento es algo más duradero como el amor o la tristeza.");
+  }
+
+  if (emocionEjemplo !== "") {
+    correctas++;
+  } else {
+    errores.push("Ejemplo de emoción: No escribiste un ejemplo. Recuerda que una emoción es algo inmediato como el miedo o la sorpresa.");
+  }
+
+  const nombre = document.getElementById('nombre').value.trim();
+
+  const resultado = document.getElementById('resultado');
+  const erroresDiv = document.getElementById('errores');
+
+  let mensajePositivo = "";
+  if (correctas === 9) {
+    resultado.innerHTML = `¡Excelente, ${nombre}! 🏆 Respondiste todo correctamente. ¡Sigue así!`;
+    mensajePositivo = "¡Impresionante! Continúa con este enfoque positivo.";
+  } else if (correctas >= 5) {
+    resultado.innerHTML = `${nombre}, acertaste ${correctas} de 9.<br>¡Sigue practicando! 🌟`;
+    mensajePositivo = "Vas muy bien, ¡sigue trabajando en ello!";
+  } else {
+    resultado.innerHTML = `${nombre}, acertaste ${correctas} de 9.<br>¡Ánimo, sigue aprendiendo! 🙌`;
+    mensajePositivo = "¡No te des por vencido! ¡Lo lograrás pronto!";
+  }
+
+  erroresDiv.innerHTML = `
+    <h3>Detalles de tus errores:</h3>
+    <ul>${errores.map(error => `<li>${error}</li>`).join('')}</ul>
+    <p>${mensajePositivo}</p>
+  `;
+}
+</script>
+<a href="temas.html" class="back-button">Volver</a>
+</body>
+</html>
